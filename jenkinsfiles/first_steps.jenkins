@@ -13,12 +13,12 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@164.92.163.4 ping 8.8.8.8'
+                sh 'ssh root@164.92.163.4 ping -c 4 8.8.8.8'
             }
         }
         stage("Second step") {
             steps {
-                sh 'll'
+                sh 'ls -la'
             }
         }
     }
