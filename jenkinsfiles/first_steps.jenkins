@@ -13,9 +13,9 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh root@164.92.163.4;
-                cd mhddos_proxy; 
-                ls && python3 --version'
+                sh 'ssh root@164.92.163.4
+                >cd mhddos_proxy
+                >ls && python3 --version'
                 //runner.py -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l4_tcp_all.lst --rpc 1000 --debug --vpn  -t 13'
             }
         }
