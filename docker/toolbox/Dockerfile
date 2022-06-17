@@ -1,5 +1,5 @@
 FROM alpine
-RUN apk add --no-cache curl wget busybox-extras netcat-openbsd python2 py-pip
+RUN apk add --no-cache curl wget busybox-extras netcat-openbsd python3 py3-pip
 RUN pip install awscli
 RUN apk --purge -v del wget
 CMD tail -f /dev/null
